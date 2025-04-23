@@ -1,4 +1,4 @@
- This workflow validates, deploys, and runs the specified bundle
+# This workflow validates, deploys, and runs the specified bundle
 # within a pre-production target named "Dev".
 name: "Dev deployment"
 
