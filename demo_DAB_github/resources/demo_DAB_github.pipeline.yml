@@ -9,6 +9,8 @@ resources:
       libraries:
         - notebook:
             path: ../src/dlt_pipeline.ipynb
+        - notebook:
+            path: ../src/dlt_basic_pipeline.ipynb
 
       configuration:
         bundle.sourcePath: ${workspace.file_path}/src
