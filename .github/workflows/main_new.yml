@@ -29,12 +29,9 @@ jobs:
         DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
         DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
       run: |
-        echo "Uploading notebook to Databricks"
-        databricks workspace import \
-          --overwrite \
-          --language PYTHON \
-          ./dev/snake.py \
-          /Shared/snake
+        echo "Uploading PYTHON notebook to Databricks"
+        databricks workspace import --overwrite --language PYTHON ./dev/notebook.ipynb /Shared/notebook1
+         
           
     - name: Upload SQL Notebook to Databricks
       env:
