@@ -42,11 +42,8 @@ jobs:
         DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
       run: |
         echo "Uploading notebook to Databricks"
-        databricks workspace import \
-          --overwrite \
-          --language SQL \
-          ./dev/elephant.sql \
-          /Shared/elephant
+        databricks workspace import --overwrite --language SQL ./dev/notebook.ipynb /shared/elephant
+         
     # - name: Trigger Notebook Run
     #   env:
     #     DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
